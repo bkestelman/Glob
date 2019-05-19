@@ -2,8 +2,31 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+function Title(props) {
+	return <h1>{props.name}</h1>
+}
+function About(props) {
+	return <div>{props.children}</div>
+}
+function Menu(props) {
+	var items = [] 
+	for (var it of props.items) {
+		items.push(<li><span class={props.itemClass}>{it}</span></li>)
+	}
+	return <div><ul>{items}</ul></div>
+}
+
 function App() {
-  return (
+	var pages = [ 'Home', 'About', 'Contact' ]
+	return (
+		<div>
+			<Title name="My Glob" />
+			<About>A glob is a blog but globbier</About>
+			<Menu items={pages} itemClass="menu-page" />
+		</div>
+	)
+	//return <h1>Hello world</h1>
+/*  return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -21,6 +44,7 @@ function App() {
       </header>
     </div>
   );
+*/
 }
 
 export default App;
