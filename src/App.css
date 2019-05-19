@@ -32,6 +32,15 @@
   }
 }
 
+.menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px 0px;
+	width: 100px;
+}
 .menu-page {
 	border: 1px solid;
+}
+.menu-page:hover {
+	border-color: blue;
 }

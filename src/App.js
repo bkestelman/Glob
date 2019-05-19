@@ -11,9 +11,9 @@ function About(props) {
 function Menu(props) {
 	var items = [] 
 	for (var it of props.items) {
-		items.push(<li><span class={props.itemClass}>{it}</span></li>)
+		items.push(<li class={props.itemClass}>{it}</li>)
 	}
-	return <div><ul>{items}</ul></div>
+	return <ul class={props.class}>{items}</ul>
 }
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
 		<div>
 			<Title name="My Glob" />
 			<About>A glob is a blog but globbier</About>
-			<Menu items={pages} itemClass="menu-page" />
+			<Menu items={pages} itemClass="menu-page" class="menu" />
 		</div>
 	)
 	//return <h1>Hello world</h1>
