@@ -1,31 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-function Title(props) {
-	return <h1>{props.name}</h1>
-}
-function About(props) {
-	return <div>{props.children}</div>
-}
-function Menu(props) {
-	var items = [] 
-	for (var it of props.items) {
-		items.push(<li class={props.itemClass}>{it}</li>)
-	}
-	return <ul class={props.class}>{items}</ul>
-}
+import {Title, About, Menu, Page, MainContent, Clock} from './Components.js';
+//import Model from './Model.js';
 
 function App() {
-	var pages = [ 'Home', 'About', 'Contact' ]
 	return (
 		<div>
 			<Title name="My Glob" />
 			<About>A glob is a blog but globbier</About>
-			<Menu items={pages} itemClass="menu-page" class="menu" />
+			<Menu id="pages-menu" items={[]} itemClass="menu-page" class="menu" />
+{/*			<Page style="margin-left:200px;background-color:grey;">
+				<MainContent>
+					{Model.currentPage}
+				</MainContent>
+			</Page>
+*/}
+//			<Clock />
 		</div>
 	)
-	//return <h1>Hello world</h1>
 /*  return (
     <div className="App">
       <header className="App-header">

@@ -37,10 +37,16 @@
 	margin: 0;
 	padding: 10px 0px;
 	width: 100px;
+	height: 100%;
+	position: fixed;
 }
 .menu-page {
 	border: 1px solid;
 }
 .menu-page:hover {
 	border-color: blue;
+}
+
+.Page {
+	margin-left: 100px;
 }
