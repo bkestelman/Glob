@@ -11,7 +11,7 @@ const initdb = function initdb(nano) {
 	createdb(db, 'foo')
 	createdb(db, 'users')
 }
-module.exports = function(host) {
-	const nano = require('nano')(host)
+module.exports = function(config) {
+	const nano = require('nano')(config.host + ':' + config.port)
 	initdb(nano)
 }

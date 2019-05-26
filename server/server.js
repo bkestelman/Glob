@@ -7,8 +7,8 @@ const corsOptions = require('./corsOptions')
 app.use(cors(corsOptions))
 
 // Initialize db 
-const dbhost = 'http://172.18.0.2:5984'
-require('./db/initdb')(dbhost)
+const dbconf = require('./db/config.json')
+require('./db/initdb')(dbconf)
 
 // Routes
 const base = require('./routes/base')
